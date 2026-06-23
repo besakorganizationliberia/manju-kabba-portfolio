@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manju Kabba - Professional Educator & TVET Specialist</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #003d5c;
+            --accent-color: #ff6b35;
+            --light-color: #f0f4f8;
+            --text-color: #2c3e50;
+            --white: #ffffff;
+            --border-color: #e0e6ed;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ============ NAVIGATION ============ */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-links a:hover {
+            border-bottom: 2px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-color) !important;
+            padding: 8px 20px !important;
+            border-radius: 5px !important;
+            border-bottom: none !important;
+        }
+
+        .cta-btn:hover {
+            background-color: #e55a2b !important;
+            transform: translateY(-2px);
+        }
+
+        /* ============ HERO SECTION ============ */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 3rem;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--light-color) 0%, var(--white) 100%);
+            min-height: 600px;
+        }
+
+        .hero-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            color: var(--text-color);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #e55a2b;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .hero-placeholder {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 120px;
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* ============ PORTFOLIO SECTION ============ */
+        .portfolio {
+            padding: 4rem 0;
+            background-color: var(--light-color);
+        }
+
+        .portfolio h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .portfolio-image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            color: var(--white);
+        }
+
+        .portfolio-card h3 {
+            padding: 1.5rem 1.5rem 0.5rem;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .portfolio-card p {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-color);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* ============ ABOUT SECTION ============ */
+        .about {
+            padding: 4rem 0;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .expertise-list {
+            list-style-position: inside;
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .expertise-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+        }
+
+        .expertise-list li:before {
+            content: "✓ ";
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-left: -1rem;
+        }
+
+        .skills-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .skill-category h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-color);
+            font-size: 14px;
+        }
+
+        .skill-category ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--light-color) 0%, var(--white) 100%);
+            border-radius: 8px;
+            border: 2px solid var(--primary-color);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .cert-badge:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .cert-badge i {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-badge:hover i {
+            color: var(--white);
+        }
+
+        .cert-badge span {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* ============ EDUCATION SECTION ============ */
+        .education {
+            padding: 4rem 0;
+            background-color: var(--light-color);
+        }
+
+        .education h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .education-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .education-timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--primary-color);
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            grid-column: 1;
+            text-align: right;
+            padding-right: 2rem;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            grid-column: 2;
+            padding-left: 2rem;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--accent-color);
+            border: 4px solid var(--light-color);
+            border-radius: 50%;
+            top: 1.5rem;
+            z-index: 1;
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .institution {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .timeline-content .year {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 13px;
+            margin-top: 0.5rem;
+        }
+
+        /* ============ CONTACT SECTION ============ */
+        .contact {
+            padding: 4rem 0;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-top: 0.5rem;
+        }
+
+        .contact-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: var(--text-color);
+            font-size: 15px;
+        }
+
+        /* ============ FOOTER ============ */
+        .footer {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* ============ SCROLL TO TOP BUTTON ============ */
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 999;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        #scrollToTop:hover {
+            background: #e55a2b;
+            transform: scale(1.1);
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-placeholder {
+                width: 250px;
+                height: 250px;
+                font-size: 80px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 14px;
+            }
+
+            .education-timeline:before {
+                left: 10px;
+            }
+
+            .timeline-item {
+                grid-template-columns: auto 1fr;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                grid-column: 2;
+                text-align: left;
+                padding-left: 2rem;
+                padding-right: 0;
+            }
+
+            .timeline-marker {
+                left: 10px;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                font-size: 14px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 0.5rem;
+                font-size: 12px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .logo-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="24" stroke="#1a5f7a" stroke-width="2"/>
+                    <text x="25" y="32" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#1a5f7a">MK</text>
+                </svg>
+                <span class="logo-text">MANJU KABBA</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact" class="cta-btn">GET IN TOUCH</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">MANJU KABBA</h1>
+            <p class="hero-subtitle">Professional Educator | TVET Specialist | Education Development Expert</p>
+            <p class="hero-description">With over 10 years of progressive experience in education, I transform learning environments and develop sustainable educational solutions.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Start A Conversation</a>
+                <a href="#portfolio" class="btn btn-secondary">View My Work</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-placeholder">
+                <i class="fas fa-chalkboard-user"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>PORTFOLIO</h2>
+            <p class="section-subtitle">Projects, Events & Presentations</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image-placeholder">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Baseline Survey Implementation</h3>
+                    <p>Coordinated and implemented baseline survey across 550 schools in 6 counties (Montserrado, Nimba, Margibi, Bong, Rivercess, Bomi)</p>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image-placeholder">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <h3>SHAC Training Manual Development</h3>
+                    <p>Developed Sanitation and Hygiene Advocacy Club Training Manual for WASH in schools. Conducted situation analysis in 13 counties covering 759 schools.</p>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image-placeholder">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Life Skills Education Program</h3>
+                    <p>Successfully piloted Life Skills Education Program at Immaculate Conception Catholic School with comprehensive curriculum development</p>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image-placeholder">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>H2 ATLAS Research Project</h3>
+                    <p>Resource person for West Africa Science Services Center - Compiled Liberia's Hydrogen Potential Atlas and renewable energy potential data</p>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image-placeholder">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>HIV/AIDS Poem Competition</h3>
+                    <p>Spearheaded school health club members to HIV/AIDS Poem Competition at Mother Patten College - Won 1st Prize (TV Set)</p>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image-placeholder">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>TVET Delegation Leadership</h3>
+                    <p>Led 9-man Liberian TVET educators delegation in Zambia to bridge gaps in ITC TVET Curriculum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>ABOUT ME</h2>
+            <div class="about-text">
+                <p>I am a dedicated and passionate professional educator with over 10 years of progressive experience in education development, TVET (Technical Vocational Education and Training), and organizational leadership. Throughout my career, I have successfully implemented large-scale educational initiatives, developed innovative curriculum materials, and led teams to achieve measurable outcomes.</p>
+                
+                <h3>Key Expertise</h3>
+                <ul class="expertise-list">
+                    <li>Technical Vocational Education & Training (TVET)</li>
+                    <li>Life Skills Education & Health Promotion</li>
+                    <li>Educational Program Development & Implementation</li>
+                    <li>Data Analysis & GIS Technology</li>
+                    <li>Team Leadership & Project Management</li>
+                    <li>Instructional Coaching & Teacher Development</li>
+                    <li>Monitoring, Evaluation & Learning (MEAL)</li>
+                </ul>
+
+                <h3>Skills</h3>
+                <div class="skills-section">
+                    <div class="skill-category">
+                        <h4>Technical Skills</h4>
+                        <ul>
+                            <li>GIS & Geodatabase Management</li>
+                            <li>Microsoft Office Suite</li>
+                            <li>Data Processing & Analysis</li>
+                            <li>Epicollect5 Data Collection</li>
+                            <li>CCNA Certified (2026)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Professional Skills</h4>
+                        <ul>
+                            <li>Program Management</li>
+                            <li>Curriculum Development</li>
+                            <li>Stakeholder Engagement</li>
+                            <li>Proposal Writing</li>
+                            <li>Training Facilitation</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <ul>
+                            <li>English - Fluent (Expert)</li>
+                            <li>French - Basic</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Key Certifications</h3>
+                <div class="certifications-grid">
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>PRINCE-2 Project Mgmt</span>
+                    </div>
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Outcome-Based Education</span>
+                    </div>
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Early Childhood Dev</span>
+                    </div>
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>HR Management</span>
+                    </div>
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Monitoring & Eval</span>
+                    </div>
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Instructional Coach</span>
+                    </div>
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>MEAL Certification</span>
+                    </div>
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>First Aid & Trauma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+        <div class="container">
+            <h2>EDUCATION</h2>
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Master of Arts in Literacy Development Studies (MALLD)</h3>
+                        <p class="institution">University of Africa, Lusaka, Zambia</p>
+                        <p class="year">2025 - Present</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>DIT, ICT and TVET</h3>
+                        <p class="institution">Zambia University College of Technology, Ndola City</p>
+                        <p class="year">2025 - 2026</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>BSc Secondary Education, School Administration</h3>
+                        <p class="institution">LICOSESS College of Education, Paynesville, Liberia</p>
+                        <p class="year">2023 - 2025</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Associate Degree in Secondary Education, School Administration</h3>
+                        <p class="institution">LICOSESS College of Education, Paynesville, Liberia</p>
+                        <p class="year">2011 - 2014</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Diploma & WAEC Certificate</h3>
+                        <p class="institution">Len Millar Senior High School, Monrovia, Liberia</p>
+                        <p class="year">2003</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>GET IN TOUCH</h2>
+            <p class="section-subtitle">Let's collaborate on your next educational initiative</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+231 (0) 881 709 012</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>kabba.manju@yahoo.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Sue Avenue, Du-Port Road, Paynesville, Liberia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Manju Kabba. All rights reserved. | Professional Education & Development Portfolio</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop">↑</button>
+
+    <script>
+        // Smooth Scrolling
+        const navLinks = document.querySelectorAll('a[href^="#"]');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        console.log('✓ Manju Kabba Professional Portfolio Loaded Successfully!');
+    </script>
+</body>
+</html>
